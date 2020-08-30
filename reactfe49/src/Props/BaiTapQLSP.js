@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import SanPham from './SanPham'
 
 export default class BaiTapQLSP extends Component {
     state = {
@@ -9,18 +10,7 @@ export default class BaiTapQLSP extends Component {
     renderSanPham = () => {
         return this.props.mangSP?.map((sanPham, index) => {
             return <div className="col-3" key={index}>
-                <div className="card text-left">
-                    <img className="card-img-top" style={{ height: 250 }} src={sanPham.hinhAnh} alt={sanPham.hinhAnh} />
-                    <div className="card-body">
-                        <h4 className="card-title">{sanPham.tenSP}</h4>
-                        <p className="card-text">{sanPham.gia}</p>
-                        <button onClick ={() =>{
-                            this.xemChiTiet(sanPham)
-                        }}
-                         className="btn btn-success">Xem chi tiet</button>
-                    </div>
-                </div>
-
+               <SanPham sp={sanPham}  xemChiTiet={this.xemChiTiet}/>
             </div>
         })
     }
@@ -42,7 +32,7 @@ export default class BaiTapQLSP extends Component {
                 </div>
 
                 <div className="row">
-                    <div className="col-4">
+                    <div className="col-4 ">
                         <h3 className="text-center">{tenSP}</h3>
                         <img src={hinhAnh} alt={hinhAnh}/>
                     </div>
