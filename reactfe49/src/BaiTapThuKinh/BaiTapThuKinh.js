@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import DanhSachSanPham from './DanhSachSanPham';
+import HinhThuKinh from './HinhThuKinh';
 
 export default class BaiTapThuKinh extends Component {
 
@@ -24,6 +25,17 @@ export default class BaiTapThuKinh extends Component {
         { id: 9, price: 30, name: 'FENDI F4300', hinhAnh: './img/v9.png', desc: 'Light pink square lenses define these sunglasses, ending with amother of pearl effect tip. ' },
 
     ];
+    state = {
+        matKinh: {
+            id: 1, price: 30, name: 'GUCCI G8850U', hinhAnh: './img/v1.png', desc: 'Light pink square lenses define these sunglasses, ending with amother of pearl effect tip. '
+        }
+
+    }
+    doiMatKinh =(spClick)=>{
+        this.setState({
+            matKinh:spClick
+        })
+    }
     render() {
         return (
             <div style={{ background: 'url("./img/background.jpg")', width: '100%', height: 850, backgroundSize: 'cover' }}>
@@ -32,16 +44,8 @@ export default class BaiTapThuKinh extends Component {
                         <h2 style={{ color: 'white', paddingTop: 25, margin: 0 }}>TRY GLASSES APP ONLINE</h2>
                     </div>
                     <div className="container">
-                        <div style={{ paddingTop: 50, display: 'flex', justifyContent: 'center' }}>
-                            <div style={{ background: 'url("./img/model.jpg")', width: 300, height: 350, backgroundSize: 'cover', position: 'relative' }}>
-                                <img style={{ width: 140, position: 'absolute', top: 95, left: 82 }} src="./img/v7.png" className="card-img-top" />
-                                <div className="card-body" style={{ textAlign: "left", background: 'rgba(255,152,0,.5)', position: 'absolute', bottom: 0 }}>
-                                    <h5 className="card-title" style={{ margin: 0, fontSize: 20, color: 'blue' }}>Card title</h5>
-                                    <p className="card-text" style={{ marginTop: 10, color: 'white' }}>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <DanhSachSanPham mangSanPham={this.mangSanPham} />
+                        <HinhThuKinh matKinh={this.state.matKinh} />
+                        <DanhSachSanPham mangSanPham={this.mangSanPham} doiMatKinh={this.doiMatKinh}/>
                     </div>
                 </div>
             </div>

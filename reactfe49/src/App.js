@@ -55,8 +55,8 @@ function App() {
       {/* <BaiTapQLSP /> */}
       {/*  Nếu sử dụng lại BaiTapQLSP mà không sử dụng props thì phải thêm ? sau this.props.mangSP? */}
       {/* <BaiTapGioHang /> */}
-      {/* <BaiTapThuKinh/> */}
-      <BaiTapGioHangRedux/>
+      <BaiTapThuKinh/>
+      {/* <BaiTapGioHangRedux/> */}
     </div>
   );
 }

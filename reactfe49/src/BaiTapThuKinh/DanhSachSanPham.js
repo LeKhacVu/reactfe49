@@ -5,7 +5,7 @@ export default class DanhSachSanPham extends Component {
     renderSanPham = ()=>{
         return this.props.mangSanPham.map((sanPham,index)=>{
             return <div key={index} className="col-2">
-                <SanPhamKinh sanPham={sanPham}/>
+                <SanPhamKinh sanPham={sanPham} doiMatKinh={this.props.doiMatKinh}/>
             </div>
         })
     }
