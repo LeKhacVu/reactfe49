@@ -20,6 +20,8 @@ import BaiTapRenderPhim from './RenderWithMap/BaiTapRenderPhim';
 import DemoProps from './Props/DemoProps';
 import BaiTapQLSP from './Props/BaiTapQLSP';
 import BaiTapGioHang from './BaiTapGioHang/BaiTapGioHang';
+import BaiTapThuKinh from './BaiTapThuKinh/BaiTapThuKinh';
+import BaiTapGioHangRedux from './BaiapRedux/BaiTapGioHangRedux/BaiTapGioHangRedux';
 
 function App() {
 
@@ -52,7 +54,9 @@ function App() {
       {/* <BaiTapQLSP mangSP={mangSanPham} /> */}
       {/* <BaiTapQLSP /> */}
       {/*  Nếu sử dụng lại BaiTapQLSP mà không sử dụng props thì phải thêm ? sau this.props.mangSP? */}
-      <BaiTapGioHang />
+      {/* <BaiTapGioHang /> */}
+      {/* <BaiTapThuKinh/> */}
+      <BaiTapGioHangRedux/>
     </div>
   );
 }
