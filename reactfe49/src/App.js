@@ -22,6 +22,7 @@ import BaiTapQLSP from './Props/BaiTapQLSP';
 import BaiTapGioHang from './BaiTapGioHang/BaiTapGioHang';
 import BaiTapThuKinh from './BaiTapThuKinh/BaiTapThuKinh';
 import BaiTapGioHangRedux from './BaiapRedux/BaiTapGioHangRedux/BaiTapGioHangRedux';
+import BaiTapGameTaiXiu from './BaiapRedux/BaiTapGameTaiXiu/BaiTapGameTaiXiu';
 
 function App() {
 
@@ -55,8 +56,9 @@ function App() {
       {/* <BaiTapQLSP /> */}
       {/*  Nếu sử dụng lại BaiTapQLSP mà không sử dụng props thì phải thêm ? sau this.props.mangSP? */}
       {/* <BaiTapGioHang /> */}
-      <BaiTapThuKinh/>
+      {/* <BaiTapThuKinh/> */}
       {/* <BaiTapGioHangRedux/> */}
+      <BaiTapGameTaiXiu/>
     </div>
   );
 }
