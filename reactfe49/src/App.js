@@ -22,6 +22,10 @@ import BaiTapQLSP from './Props/BaiTapQLSP';
 import BaiTapGioHang from './BaiTapGioHang/BaiTapGioHang';
 import BaiTapThuKinh from './BaiTapThuKinh/BaiTapThuKinh';
 import BaiTapGioHangRedux from './BaiapRedux/BaiTapGioHangRedux/BaiTapGioHangRedux';
+import FormSinhVien from './ReactForm/FormSinhVien';
+import DanhSachSinhVien from './ReactForm/DanhSachSinhVien';
+import BaiTapGameTuXi from './BaiapRedux/BaiTapOanTuXi/BaiTapGameTuXi';
+import LifeCycle from './LifeCycle/LifeCycle';
 
 function App() {
 
@@ -56,7 +60,10 @@ function App() {
       {/*  Nếu sử dụng lại BaiTapQLSP mà không sử dụng props thì phải thêm ? sau this.props.mangSP? */}
       {/* <BaiTapGioHang /> */}
       {/* <BaiTapThuKinh/> */}
-      <BaiTapGioHangRedux/>
+      {/* <BaiTapGioHangRedux/> */}
+      <DanhSachSinhVien/>
+      {/* <BaiTapGameTuXi/> */}
+      {/* <LifeCycle/> */}
     </div>
   );
 }
